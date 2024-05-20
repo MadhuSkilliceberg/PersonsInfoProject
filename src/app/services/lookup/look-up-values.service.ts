@@ -23,10 +23,14 @@ export class LookUpValueservice {
   GetLookUpValueByCode(codes:string[]): any {
     return this.http.post(this.endpointUrl+"GetLookUpValueByCode",codes);
   }
+
+  GetLookUpValueByLId(id:number): any {
+    return this.http.get(this.endpointUrl+"GetLookUpValueByLId/"+id);
+  }
    
   // By using this method we will get the LookUpValues based on the Id
   GetLookUpValuesById(id: number): any {
-    return this.http.get(this.endpointUrl+"GetLookUpValuesById/" + id);
+    return this.http.get(this.endpointUrl+"GetLookUpValueById/" + id);
   }
 
   // By uing this method we will Add the LookUpValues based on LookUpValues

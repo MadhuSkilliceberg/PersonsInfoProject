@@ -141,6 +141,9 @@ import { InstitutionTimelineComponent } from './components/institutions/institut
 import { InstitutionTaskComponent } from './components/institutions/institution-task/institution-task.component';
 //import { UserRegComponent } from './components/user-registration/user-reg/user-reg.component';
 import { ExamSelectionComponent } from './components/exam-selection/exam-selection.component';
+import { LookupComponent } from './components/lookup/lookup.component';
+import { LookupvalueComponent } from './components/lookupvalue/lookupvalue.component';
+//import { DndComponent } from './components/dnd/dnd.component';
 
 
 const routes: Routes = [
@@ -289,6 +292,10 @@ const routes: Routes = [
   { path: 'InstitutionTask', component: InstitutionTaskComponent},
   
   { path: 'Question', component: QuestionComponent},
+  { path: 'lookup', component: LookupComponent},
+  { path: 'lookupvalue', component: LookupvalueComponent},
+  { path: 'lookupvalue/:id', component: UserRegComponent},
+ // { path: 'Dnd', component: DndComponent},
   
 ];
 

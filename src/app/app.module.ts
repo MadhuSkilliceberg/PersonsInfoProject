@@ -165,8 +165,13 @@ import { UserDetailsComponent } from './component/user/user-details/user-details
 import { InstitutionTimelineComponent } from './components/institutions/institution-timeline/institution-timeline.component';
 import { InstitutionTaskComponent } from './components/institutions/institution-task/institution-task.component';
 import { ExamSelectionComponent } from './components/exam-selection/exam-selection.component';
+import { LookupComponent } from './components/lookup/lookup.component';
+import { LookupvalueComponent } from './components/lookupvalue/lookupvalue.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 //import { NgxDnDModule } from '@swimlane/ngx-dnd';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 export function tokenGetter() { 
@@ -323,9 +328,12 @@ export function tokenGetter() {
     UserDetailsComponent,
     InstitutionTimelineComponent,
     InstitutionTaskComponent,
-    ExamSelectionComponent
+    ExamSelectionComponent,
+    LookupComponent,
+    LookupvalueComponent
   ],
   imports: [
+    MatSlideToggleModule,DragDropModule,
     BrowserModule,CdkStepperModule,//NgMultiSelectDropDownModule.forRoot(),
     AppRoutingModule,
     CommonModule,
@@ -340,7 +348,8 @@ export function tokenGetter() {
         allowedDomains: ["localhost:5001","localhost:44384"],
         disallowedRoutes: []
       }
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [
     AuthGuard,

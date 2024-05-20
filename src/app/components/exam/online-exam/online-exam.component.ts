@@ -13,9 +13,9 @@ export class OnlineExamComponent implements OnInit {
   examQuestionItem: ExamQuestion = new ExamQuestion();
   selectionQuestionId!: number;
   userExamQuestionsAudit!: UserExamQuestionsAudit;
-  name = 'Angular ';
-  display: any;
-  public timerInterval: any;
+ // name = 'Angular ';
+ // display: any;
+  //public timerInterval: any;
   constructor(
     private questionService: QuestionService,
   ) { }
@@ -101,37 +101,37 @@ export class OnlineExamComponent implements OnInit {
     
   }
 
-  start() {
-    this.timer(2);
-  }
-  stop() {
-    clearInterval(this.timerInterval);
-  }
+  // start() {
+  //   this.timer(2);
+  // }
+  // stop() {
+  //   clearInterval(this.timerInterval);
+  // }
 
-  timer(minute: any) {
-    // let minute = 1;
-    let seconds: number = minute * 60;
-    let textSec: any = '0';
-    let statSec: number = 60;
+  // timer(minute: any) {
+  //   // let minute = 1;
+  //   let seconds: number = minute * 60;
+  //   let textSec: any = '0';
+  //   let statSec: number = 60;
 
-    const prefix = minute < 10 ? '0' : '';
+  //   const prefix = minute < 10 ? '0' : '';
 
-    this.timerInterval = setInterval(() => {
-      seconds--;
-      if (statSec != 0) statSec--;
-      else statSec = 59;
+  //   this.timerInterval = setInterval(() => {
+  //     seconds--;
+  //     if (statSec != 0) statSec--;
+  //     else statSec = 59;
 
-      if (statSec < 10) {
-        textSec = '0' + statSec;
-      } else textSec = statSec;
+  //     if (statSec < 10) {
+  //       textSec = '0' + statSec;
+  //     } else textSec = statSec;
 
-      this.display = `${prefix}${Math.floor(seconds / 60)}:${textSec}`;
+  //     this.display = `${prefix}${Math.floor(seconds / 60)}:${textSec}`;
 
-      if (seconds == 0) {
-        console.log('finished');
-        clearInterval(this.timerInterval);
-      }
-    }, 1000);
-  }
+  //     if (seconds == 0) {
+  //       console.log('finished');
+  //       clearInterval(this.timerInterval);
+  //     }
+  //   }, 1000);
+  // }
 
 }
